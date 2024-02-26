@@ -2,14 +2,32 @@ package examen;
 
 import java.util.*;
 
+/**
+ * Clase que realiza un juego de piedra, papel o tijera
+ * 
+ * @author DAM114
+ * @version 1.1
+ * @since version 1.1
+ */
 public class RockPaperScissors {
+	
 	private static int keyboard = 0;
 	private static Scanner scanner = new Scanner(System.in);
+	
+	/**
+	 * Lista que almacena las 3 opciones posibles: Rock, Paper y Scissors
+	 */
 	public static List<String> optionList = Arrays.asList("Rock", "Paper", "Scissors");
 
+	/**
+	 * Constructor por defecto de la clase RockPaperScissors
+	 */
 	public RockPaperScissors() {
 	}
 
+	/**
+	 * @hidden
+	 */
 	public static void main(String[] args) {
 		do {
 			System.out.println("Welcome to Rock, Paper, Scissors!");
@@ -24,6 +42,12 @@ public class RockPaperScissors {
 		scanner.close();
 	}
 
+	/**
+	 * Método que muestra el resultado del juego según las opciones introducidas por parámetros, mostrando quien gana o si hay empate
+	 * @param userChoice Opción del usuario
+	 * @param computerChoice Opción de la máquina
+	 * @return Resultado del juego
+	 */
 	public static String checkGame(String userChoice, String computerChoice) {
 		String gameResult = "";
 		if (userChoice.equals(computerChoice)) {
